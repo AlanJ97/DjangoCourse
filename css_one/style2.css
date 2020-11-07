@@ -1,0 +1,12 @@
+body{
+    background-color: salmon;
+}
+div{
+    background-color: silver;
+    border-color: slateblue;
+    border-width: inherit;
+    border-style: dotted;
+}
+p{
+    color: maroon;
+}
