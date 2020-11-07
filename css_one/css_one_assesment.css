@@ -1,0 +1,31 @@
+body{
+    color: blue;
+}
+h1{
+    border: 1px solid black;
+}
+h2{
+    color: purple;
+}
+input{
+    border: 2px solid  rgb(134, 218, 134);
+}
+div p{
+    background: rgb(209, 35, 200);
+}
+#textblock{
+    border: 5px solid gray;
+    width: 800px;
+    height: 400px;
+}
+#itemone{
+    text-decoration: overline;
+    color: lightcoral;
+}
+.exit{
+    background-color: mediumvioletred;
+    border: 4px dashed yellow;
+}
+a:visited{
+    color: purple;
+}
