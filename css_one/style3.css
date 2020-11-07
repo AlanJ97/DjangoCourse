@@ -1,0 +1,24 @@
+
+.container1{
+    color: orchid;
+}
+.container2{
+    color:lime;
+}
+#singledout{
+    color: orangered;
+    text-decoration: seagreen;
+}
+*{
+    font-size: 12px;
+    border-color: teal;
+}
+h3 + ul{
+    border-top-color: teal;
+    text-decoration-color: white;
+    align-items: center;
+    direction: rtl;
+}
+li a{
+    color: red;
+}
