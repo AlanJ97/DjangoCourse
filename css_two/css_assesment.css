@@ -1,0 +1,31 @@
+td{
+    background-color: black;
+    height: 200px;
+    width: 100px;
+    border: 6px solid white;
+}
+h1{
+    text-align: center;
+
+}
+.art{
+    margin: auto;
+}
+#one{
+    background-color: blue;
+}
+#two{
+    background-color: cadetblue;
+}
+#three{
+    background-color: cyan;
+}
+#four{
+    background-color: deeppink;
+}
+#five{
+    background-color: forestgreen;
+}
+#six{
+    background-color: greenyellow;
+}
