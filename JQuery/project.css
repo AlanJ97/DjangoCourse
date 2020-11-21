@@ -1,0 +1,12 @@
+.container{
+   align-content: center;
+   margin-top: auto;
+}
+.board button{
+    width: 100px;
+    height: 100px;
+    color: gray;
+    margin:1px;
+    border-radius: 50%;
+    border: black solid 4px;
+}
