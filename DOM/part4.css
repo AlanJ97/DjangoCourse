@@ -1,0 +1,13 @@
+/* table{
+
+    margin-left: 0%;
+    margin-right: 25%;
+  
+} */
+td, tr{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border: black solid 5px;
+    font-size: 100px;
+}
