@@ -1,12 +1,16 @@
+
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First app</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    <title>Django Image</title>
 </head>
 <body>
     <h1>HEllo, this is an index</h1>
     {{ insert_me }}
+    <img src="{% static 'images/Miniatura.png' %}" alt="File Not Found">
 </body>
 </html>
