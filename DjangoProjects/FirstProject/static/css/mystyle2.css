@@ -1,0 +1,14 @@
+h1{
+    color: blue;
+    font-size: 45px;
+    border-radius: 25%;
+}
+h4{
+    background-color: orange;    
+}
+table, th, td{
+    border: 2px solid black;
+}
+.djangtwo{
+    background-color: green;
+}
