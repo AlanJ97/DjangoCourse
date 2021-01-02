@@ -9,6 +9,15 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'basic_app/index.html')
 
+@login_required
+def special(request):
+    return HttpResponse("You are logged in, cool!")
+
+@login_required
+def user_logout(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('index'))
+
 def register(request):
     registered = False
 
@@ -58,4 +67,4 @@ def user_login(request):
             print("Username: {} and Password: {}".format(username ,password))
             return HttpResponse("Invalid Credentials")
     else:
-        return render(request, 'basic_app/login.html')
+        return render(request, 'basic_app/login.html',{})
