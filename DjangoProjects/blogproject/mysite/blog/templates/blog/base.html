@@ -1,11 +1,58 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/medium-editor@latest/dist/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet"> 
+    <title>BLOG</title>
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg techfont navbar-light bg-light">
+       <div class="contianer">
+           <ul>
+            <li><a href="{% url 'post_list' %}" class="navbar-brand bigbrand">My blog</a></li>
+            <li><a href="{% url 'about' %}">About</a></li>
+            <li><a href="https://www.github.com">Github</a></li>
+           </ul>
+       </div>
+    </nav>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Navbar</span>
+          
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'post_new' %}">New Post</a></li>
+            <li><a href="{% url 'post_draft_list' %}">Draft list</a></li>
+            <li><a href="{% url 'logout' %}">Log Out</a></li>           
+            <li><a>WELCOME: {{ user.username }}</a></li>  
+            {% else %}
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-md">
+                  <a class="navbar-brand" href="{% url 'login' %}">Log In</a>
+                  <span class="glyphicon glyphicon-user"></span>
+                </div>
+            </nav>
+          {% endif %}
+
+        </div>
+    </nav>
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="blog_posts">
+                    {% block content %}
+                        
+                    {% endblock  %}
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
