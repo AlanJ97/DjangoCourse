@@ -19,7 +19,7 @@ class Group(models.Model):
     def __str__(self):
         return self.name
     
-    def(self, *args, **kargs):
+    def save (self, *args, **kargs):
         self.slug = slugify(self.name)
         self.description_html = misaka.html(self.description)
         super().save(*args, **kargs)
@@ -31,7 +31,7 @@ class Group(models.Model):
     class Meta:
         ordering = ['name']
 class GroupMember(models.Model):
-    group = Models.ForeignKey(Group, related_name = 'memberships')
+    group = models.ForeignKey(Group, related_name = 'memberships')
     user = models.ForeignKey(User, related_name = 'user_groups')
 
     def __str__(self):
